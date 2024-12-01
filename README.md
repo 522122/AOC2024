@@ -1,1 +1,3 @@
-# AOC2024
+```
+deno task dev 01
+```
