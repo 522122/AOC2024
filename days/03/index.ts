@@ -41,4 +41,18 @@ export default () => {
 
     console.log('PT1:', sum)
     console.log('PT2:', sum2)
+
+
+    const mod = input.replace(/do\(\)/g, '###do()').replace(/don't\(\)/g, '###don\'t()')
+
+    const data = mod.split('###').filter(l => !l.startsWith('don')).join('')
+
+    let sum3 = 0
+    for (const match of data.matchAll(/mul\((\d+),(\d+)\)/g)) {
+        const a = parseInt(match[1])
+        const b = parseInt(match[2])
+        const result = a * b
+        sum3 += result
+    }
+    console.log(sum3)
 }
