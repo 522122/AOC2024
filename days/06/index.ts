@@ -15,6 +15,7 @@ function rotateVector90Degrees(vector: [number, number]): [number, number] {
 } 
 
 const play = (matrix: string[][], startX: number, startY: number) => {
+    const maxLoopSize = matrix.length * matrix[0].length
     const guard = {
         x: startX,
         y: startY
@@ -50,7 +51,7 @@ const play = (matrix: string[][], startX: number, startY: number) => {
                 return [positions.size + 1, steps, false]
         }
 
-        if (steps > 100000) {
+        if (steps > maxLoopSize) {
             return [positions.size + 1, steps, true]
         }
     }    
