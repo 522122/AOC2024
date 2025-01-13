@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-read main.ts"
+    "dev": "deno run --v8-flags=--max-old-space-size=8000 --watch --allow-read main.ts"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1"
