@@ -15,7 +15,6 @@ jobs:
         with:
           year: 2024
           userId: 2316186
-          leaderboardId: 2316186-ccf5c076
           sessionCookie: ${{ secrets.AOC_SESSION }}
       - uses: stefanzweifel/git-auto-commit-action@v5 # use v5
         with:
