@@ -8,6 +8,7 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func readInput() []string {
@@ -162,8 +163,12 @@ func main() {
 	var input []string = readInput()
 	_, B, C, instructions := parseInput(&input)
 
+	start := time.Now()
+
 	A := bruteForce(B, C, instructions, 2)
 
 	fmt.Println(A)
 
+	elapsed := time.Since(start)
+	fmt.Printf("Execution time: %s\n", elapsed)
 }
